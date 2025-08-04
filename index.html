@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Feed de Fotos con Bootstrap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Nav Start -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://www.instagram.com/?hl=es-la">
+                <i class="fa-brands fa-instagram fa-xl ms-5 me-1"></i>
+                Instagram
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+
+                <form class="d-flex" role="search">
+                    <button class="btn btn-success me-4" data-bs-toggle="modal" data-bs-target="#createPostModal"
+                        type="button">
+                        Create a new post
+                    </button>
+                </form>
+
+                <ul class="nav nav-pills">
+                    <li class="nav-item dropdown me-5">
+                        <a class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Accessibility</a></li>
+                            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav End -->
+    <!-- Modal Start -->
+    <div class="modal fade" id="createPostModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create a new post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-4">
+                            <label for="message-text" class="col-form-label">Caption:</label>
+                            <textarea class="form-control mb-2" id="message-text"
+                                placeholder="Add the caption of your post here"></textarea>
+                            <button class="btn btn-light border mt-2 me-1" type="button">
+                                <i class="fa-solid fa-camera" style="color: #000000;"></i>
+                            </button>
+                            <button class="btn btn-light border mt-2" type="button">
+                                <i class="fa-solid fa-location-dot" style="color: #000000;"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal End -->
+    <!-- Tabs Start -->
+    <div class="d-flex justify-content-center mt-3">
+        <ul class="nav nav-pills" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid-content" type="button"
+                    role="tab" aria-controls="grid-content" aria-selected="false">
+                    <i class="bi bi-grid-3x3-gap-fill fs-3"></i>
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="square-tab" data-bs-toggle="tab" data-bs-target="#square-content"
+                    type="button" role="tab" aria-controls="square-content" aria-selected="true">
+                    <i class="bi bi-square-fill fs-3"></i>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <!-- contenido -->
+    <div class="tab-content text-center mt-4">
+        <div class="tab-pane fade" id="grid-content" role="tabpanel" aria-labelledby="grid-tab">
+            <div class="gallery-grid">
+                <img src="https://plus.unsplash.com/premium_photo-1753211477530-ac7d65a3119f?w=500&auto=format&fit=crop&q=60"
+                    alt="imagen random" />
+                <img src="https://images.unsplash.com/photo-1735927030748-26623a3422ab?w=500&auto=format&fit=crop&q=60"
+                    alt="imagen random" />
+                <img src="https://images.unsplash.com/photo-1741850820171-22561ea229d8?w=500&auto=format&fit=crop&q=60"
+                    alt="imagen random" />
+                <img src="https://images.unsplash.com/photo-1741850821596-f29a6e58356b?w=500&auto=format&fit=crop&q=60"
+                    alt="imagen random" />
+                <img src="https://images.unsplash.com/photo-1744424705159-f56c37fa565e?w=500&auto=format&fit=crop&q=60"
+                    alt="imagen random" />
+                <img src="https://images.unsplash.com/photo-1743713063092-76a2c769d1c1?w=500&auto=format&fit=crop&q=60"
+                    alt="imagen random" />
+                <img src="https://images.unsplash.com/photo-1753907537890-f20de9e116cc?w=500&auto=format&fit=crop&q=60"
+                    alt="imagen random" />
+                <img src="https://images.unsplash.com/photo-1590698933947-a202b069a861?w=500&auto=format&fit=crop&q=60"
+                    alt="imagen random" />
+                <img src="https://plus.unsplash.com/premium_photo-1753820185574-ef1646bcc698?w=500&auto=format&fit=crop&q=60"
+                    alt="imagen random" />
+                    
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-pane fade show active" id="square-content" role="tabpanel" aria-labelledby="square-tab">
+        <div class="container posts-container">
+            <div class="posts-wrapper">
+                <!-- Post 1 -->
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <strong>My Crazy dog Spark!</strong>
+                        <small>08/26</small>
+                    </div>
+                    <img src="https://plus.unsplash.com/premium_photo-1753211477530-ac7d65a3119f?w=500&auto=format&fit=crop&q=60"
+                        class="card-img-top" alt="Dog Spark" />
+                    <div class="card-body">
+                        <p class="mb-1 text-start"><strong>204 Likes</strong></p>
+                        <p class="card-text text-start">This is an example of a very good photo that you can post on
+                            instagram</p>
+                    </div>
+                </div>
+
+                <!-- Post 2 -->
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <strong>The greatness of Croatia</strong>
+                        <small>04/09</small>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1735927030748-26623a3422ab?w=500&auto=format&fit=crop&q=60"
+                        class="card-img-top" alt="Croatia landscape" />
+                    <div class="card-body">
+                        <p class="mb-1 text-start"><strong>26855 Likes</strong></p>
+                        <p class="card-text text-start">This is an example of a very good photo that you can post on
+                            instagram</p>
+                    </div>
+                </div>
+
+                <!-- Post 3 -->
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <strong>My Crazy dog Spark!</strong>
+                        <small>08/26</small>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1741850820171-22561ea229d8?w=500&auto=format&fit=crop&q=60"
+                        class="card-img-top" alt="Dog Spark" />
+                    <div class="card-body">
+                        <p class="mb-1 text-start"><strong>204 Likes</strong></p>
+                        <p class="card-text text-start">This is an example of a very good photo that you can post on
+                            instagram</p>
+                    </div>
+                </div>
+
+                <!-- Post 4 -->
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <strong>My Crazy dog Spark!</strong>
+                        <small>08/26</small>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1741850821596-f29a6e58356b?w=500&auto=format&fit=crop&q=60"
+                        class="card-img-top" alt="Dog Spark" />
+                    <div class="card-body">
+                        <p class="mb-1 text-start"><strong>204 Likes</strong></p>
+                        <p class="card-text text-start">This is an example of a very good photo that you can post on
+                            instagram</p>
+                    </div>
+                </div>
+
+                <!-- Post 5 -->
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <strong>My Crazy dog Spark!</strong>
+                        <small>08/26</small>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1744424705159-f56c37fa565e?w=500&auto=format&fit=crop&q=60"
+                        class="card-img-top" alt="Dog Spark" />
+                    <div class="card-body">
+                        <p class="mb-1 text-start"><strong>204 Likes</strong></p>
+                        <p class="card-text text-start">This is an example of a very good photo that you can post on
+                            instagram</p>
+                    </div>
+                </div>
+
+                <!-- Post 6 -->
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <strong>My Crazy dog Spark!</strong>
+                        <small>08/26</small>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1743713063092-76a2c769d1c1?w=500&auto=format&fit=crop&q=60"
+                        class="card-img-top" alt="Dog Spark" />
+                    <div class="card-body">
+                        <p class="mb-1 text-start"><strong>204 Likes</strong></p>
+                        <p class="card-text text-start">This is an example of a very good photo that you can post on
+                            instagram</p>
+                    </div>
+                </div>
+
+                <!-- Post 7 -->
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <strong>My Crazy dog Spark!</strong>
+                        <small>08/26</small>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1753907537890-f20de9e116cc?w=500&auto=format&fit=crop&q=60"
+                        class="card-img-top" alt="Dog Spark" />
+                    <div class="card-body">
+                        <p class="mb-1 text-start"><strong>204 Likes</strong></p>
+                        <p class="card-text text-start">This is an example of a very good photo that you can post on
+                            instagram</p>
+                    </div>
+                </div>
+
+                <!-- Post 8 -->
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <strong>My Crazy dog Spark!</strong>
+                        <small>08/26</small>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1590698933947-a202b069a861?w=500&auto=format&fit=crop&q=60"
+                        class="card-img-top" alt="Dog Spark" />
+                    <div class="card-body">
+                        <p class="mb-1 text-start"><strong>204 Likes</strong></p>
+                        <p class="card-text text-start">This is an example of a very good photo that you can post on
+                            instagram</p>
+                    </div>
+                </div>
+
+                <!-- Post 9 -->
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <strong>My Crazy dog Spark!</strong>
+                        <small>08/26</small>
+                    </div>
+                    <img src="https://plus.unsplash.com/premium_photo-1753820185574-ef1646bcc698?w=500&auto=format&fit=crop&q=60"
+                        class="card-img-top" alt="Dog Spark" />
+                    <div class="card-body">
+                        <p class="mb-1 text-start"><strong>204 Likes</strong></p>
+                        <p class="card-text text-start">This is an example of a very good photo that you can post on
+                            instagram</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Tabs End -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+ /* Estilos CSS personalizados para la apariencia de los íconos */
+ .nav-link {
+     color: #adb5bd;
+     /* Gris para el ícono inactivo */
+     background-color: transparent !important;
+     border: none !important;
+     padding: 0.5rem;
+     transition: color 0.3s ease;
+ }
+
+ .nav-link.active {
+     color: rgb(0, 149, 246) !important;
+     /* Azul para el ícono activo */
+ }
+
+ /* Evitar que se cambie el color al pasar el mouse */
+ .nav-link:hover {
+     color: #adb5bd !important;
+     background-color: transparent !important;
+ }
+
+ .nav-item {
+     margin: 0 7.5px;
+     /* Pequeño espacio entre los íconos */
+ }
+
+ .posts-container {
+     margin-top: 2rem;
+     display: flex;
+     justify-content: center;
+ }
+
+ .posts-wrapper {
+     width: 100%;
+     max-width: 600px;
+ }
+
+ .card+.card {
+     margin-top: 1.5rem;
+ }
+
+ .gallery-grid {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     /* 3 columnas */
+     gap: 15px;
+     /* Más espacio entre imágenes */
+     max-width: 1500px;
+     /* << AUMENTADO */
+     margin: 0 auto;
+     /* Centrado */
+ }
+
+ .gallery-grid img {
+     width: 100%;
+     height: auto;
+     object-fit: cover;
+     aspect-ratio: 1/1;
+     border-radius: 4px;
+ }
+
+ @media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr; /* 1 columna en móvil */
+  }
+}
